@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Reddit+Mono:wght@200..900&family=Roboto:wght@100&display=swap');
+
+body{
+    background-color: #d9d6d0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    padding: 10px;
+}
+
+.container .song-info{
+    background-color: rgb(10, 10, 10);
+    margin: 0 15px;
+    padding: 15px 15px 5px 150px ;
+    border-radius: 15px 15px 0 0;
+}
+
+.container .song-info .song-name {
+    color: darkgrey;
+    font-size: 14px;
+    margin: 3px 0 20px;
+}
+
+.container .song-info .artist-name {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container .song-info .progress-bar{
+    background-color: gray;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container .song-info .progress-bar .fill-bar{
+    width: 0%;
+    height: 6px;
+    border-radius: 20px;
+    background-color: brown;
+
+}
+
+.container .song-info .time {
+    font-size: 15px;
+    color: silver;
+    margin: 10px 0;
+}
+
+.container .disk {
+    max-width: 120px;
+}
+
+.container .disk .active {
+    animation: rotate 3s linear 0s infinite forwards;
+}
+
+.container .disk .cover {
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    background: url("assets/idigo.png");
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.container .disk .circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 15%;
+    top: 25%;
+    background-color: white;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.container .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #222;
+    width: 450px;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.container .controls #play{
+    background-color: brown;
+    color: white;
+    padding: 15px 17px 15px 17px;
+    font-size: 28px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.container .controls #play:hover{
+    background: rgba(165, 42, 42, 0.623);
+}
+
+.container .controls i{
+    padding: 30px 8px;
+    font-size: 35px;
+    cursor: pointer;
+    color: silver;
+    transition: all 0.3s ease;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
